@@ -1,0 +1,198 @@
+{
+    "company_id": 128,
+    "created_at": "2026-05-31T08:51:13.880901Z",
+    "direction": "out",
+    "en_invoice": {
+        "buyer": {
+            "electronic_address": {
+                "scheme": "0225",
+                "value": "315143296_127"
+            },
+            "identifiers": [
+                {
+                    "scheme": "0225",
+                    "value": "000000001"
+                }
+            ],
+            "legal_registration_identifier": {
+                "scheme": "0002",
+                "value": "000000001"
+            },
+            "name": "Tricatel",
+            "postal_address": {
+                "country_code": "FR"
+            },
+            "vat_identifier": "FR15000000001"
+        },
+        "currency_code": "EUR",
+        "deliver_to_address": {
+            "country_code": "FR"
+        },
+        "delivery_information": {
+            "delivery_date": "2025-06-30"
+        },
+        "issue_date": "2025-06-30",
+        "lines": [
+            {
+                "identifier": "001",
+                "invoiced_quantity": "28.5200",
+                "invoiced_quantity_code": "KGM",
+                "item_information": {
+                    "name": "Poulet aux hormones"
+                },
+                "net_amount": "60.46",
+                "price_details": {
+                    "item_net_price": "2.120000"
+                },
+                "vat_information": {
+                    "invoiced_item_vat_category_code": "S",
+                    "invoiced_item_vat_rate": "5.50"
+                }
+            },
+            {
+                "identifier": "002",
+                "invoiced_quantity": "1.0000",
+                "invoiced_quantity_code": "C62",
+                "item_information": {
+                    "description": "Élaboration d’un plan de communication sur les mérites des aliments ultratransformés.",
+                    "name": "Conseil en stratégie"
+                },
+                "net_amount": "1500.00",
+                "price_details": {
+                    "item_net_price": "1500.000000"
+                },
+                "vat_information": {
+                    "invoiced_item_vat_category_code": "S",
+                    "invoiced_item_vat_rate": "20.00"
+                }
+            }
+        ],
+        "notes": [
+            {
+                "note": "L’indemnité forfaitaire légale pour frais de recouvrement est de 40 €.",
+                "subject_code": "PMT"
+            },
+            {
+                "note": "À défaut de règlement à la date d’échéance, une pénalité de 10 % du net à payer sera applicable immédiatement.",
+                "subject_code": "PMD"
+            },
+            {
+                "note": "Aucun escompte pour paiement anticipé.",
+                "subject_code": "AAB"
+            }
+        ],
+        "number": "F20260531_085106_558",
+        "payment_due_date": "2025-07-30",
+        "process_control": {
+            "business_process_type": "M1",
+            "specification_identifier": "urn:cen.eu:en16931:2017"
+        },
+        "seller": {
+            "electronic_address": {
+                "scheme": "0225",
+                "value": "315143296_128"
+            },
+            "identifiers": [
+                {
+                    "scheme": "0225",
+                    "value": "000000002"
+                }
+            ],
+            "legal_registration_identifier": {
+                "scheme": "0002",
+                "value": "000000002"
+            },
+            "name": "Burger Queen",
+            "postal_address": {
+                "country_code": "FR"
+            },
+            "vat_identifier": "FR18000000002"
+        },
+        "totals": {
+            "amount_due_for_payment": "1863.79",
+            "sum_invoice_lines_amount": "1560.46",
+            "total_vat_amount": {
+                "currency_code": "EUR",
+                "value": "303.33"
+            },
+            "total_with_vat": "1863.79",
+            "total_without_vat": "1560.46"
+        },
+        "type_code": 380,
+        "vat_break_down": [
+            {
+                "vat_category_code": "S",
+                "vat_category_rate": "5.50",
+                "vat_category_tax_amount": "3.33",
+                "vat_category_taxable_amount": "60.46",
+                "vat_identifier": "VAT"
+            },
+            {
+                "vat_category_code": "S",
+                "vat_category_rate": "20.00",
+                "vat_category_tax_amount": "300.00",
+                "vat_category_taxable_amount": "1500.00",
+                "vat_identifier": "VAT"
+            }
+        ]
+    },
+    "events": [
+        {
+            "created_at": "2026-05-31T08:51:13.880901Z",
+            "id": 130017,
+            "invoice_id": 62255,
+            "status_code": "api:uploaded",
+            "status_text": "Téléversée"
+        },
+        {
+            "created_at": "2026-05-31T08:51:14.326452Z",
+            "id": 130018,
+            "invoice_id": 62255,
+            "status_code": "fr:200",
+            "status_text": "Déposée (validée)"
+        },
+        {
+            "created_at": "2026-05-31T08:51:14.326453Z",
+            "id": 130019,
+            "invoice_id": 62255,
+            "status_code": "fr:201",
+            "status_text": "Émise par la plateforme"
+        },
+        {
+            "created_at": "2026-05-31T08:51:14.733609Z",
+            "details": [
+                {}
+            ],
+            "id": 130021,
+            "invoice_id": 62255,
+            "status_code": "fr:202",
+            "status_text": "Reçue par la plateforme"
+        },
+        {
+            "created_at": "2026-05-31T08:51:46.710066Z",
+            "details": [
+                {
+                    "amounts": [
+                        {
+                            "currency_code": "EUR",
+                            "net_amount": "63.790000",
+                            "type_code": "MEN",
+                            "vat_rate": "5.50"
+                        },
+                        {
+                            "currency_code": "EUR",
+                            "net_amount": "1800.000000",
+                            "type_code": "MEN",
+                            "vat_rate": "20.00"
+                        }
+                    ]
+                }
+            ],
+            "id": 130022,
+            "invoice_id": 62255,
+            "status_code": "fr:212",
+            "status_text": "Encaissée"
+        }
+    ],
+    "id": 62255
+}
