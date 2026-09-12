@@ -36,8 +36,8 @@ import subprocess
 import sys
 import xml.etree.ElementTree as ET
 
-FNFE_ROOT = os.environ.get('FNFE_ROOT', '')
-SAXON_JAR = os.environ.get('SAXON_JAR', '')
+FNFE_ROOT = os.environ.get('FNFE_ROOT', './France_RFE/FNFE_RFE_INVOICE')
+SAXON_JAR = os.environ.get('SAXON_JAR', './saxon-he/saxon-he-12.10.jar')
 PHP_BIN = os.environ.get('PHP_BIN', 'php')
 
 XSD = os.path.join(FNFE_ROOT, 'CII', '1xsd-CII_D22B_uncoupled', 'CrossIndustryInvoice_100pD22B.xsd')
@@ -128,7 +128,7 @@ def validate(path, strict, quiet, reportdir):
     ]
 
     ok_xsd, xsd_msg = xsd_validate(path)
-    lines = ['  xsd     CrossIndustryInvoice_100pD22B      : ' + ('valid' if ok_xsd else 'INVALID')]
+    lines = ['  xsd     CrossIndustryInvoice_100pD22B     : ' + ('valid' if ok_xsd else 'INVALID')]
     if not ok_xsd:
         lines.extend('      ' + m for m in xsd_msg.splitlines()[:5])
 
@@ -144,13 +144,16 @@ def validate(path, strict, quiet, reportdir):
             valid = False
             continue
         lines.append('  %-42s: %s check(s), %s failure(s)' % (label, res['checks'], len(res['fails'])))
-        lines.extend('      [%s] (%s) %s' % (f['rule'], f['flag'], f['text']) for f in res['fails'])
+        lines.extend('    [%s] (%s) %s' % (f['rule'], f['flag'], f['text']) for f in res['fails'])
         if res['fails']:
             valid = False
 
-    text = '%-40s %s   %s' % (base, 'VALID  ' if valid else 'INVALID', urn)
-    if not quiet:
+    text = ''
+
+    if not quiet or not valid:
+        text = '%s %s (%s)' % (base, 'VALID  ' if valid else 'INVALID', urn)
         text += '\n' + '\n'.join(lines)
+
     return valid, text
 
 
