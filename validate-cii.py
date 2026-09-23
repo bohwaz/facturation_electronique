@@ -36,8 +36,8 @@ import subprocess
 import sys
 import xml.etree.ElementTree as ET
 
-FNFE_ROOT = os.environ.get('FNFE_ROOT', './France_RFE/FNFE_RFE_INVOICE')
-SAXON_JAR = os.environ.get('SAXON_JAR', './saxon-he/saxon-he-12.10.jar')
+FNFE_ROOT = os.environ.get('FNFE_ROOT', sys.path[0] + '/France_RFE/FNFE_RFE_INVOICE')
+SAXON_JAR = os.environ.get('SAXON_JAR', sys.path[0] + '/saxon-he/saxon-he-12.10.jar')
 PHP_BIN = os.environ.get('PHP_BIN', 'php')
 
 XSD = os.path.join(FNFE_ROOT, 'CII', '1xsd-CII_D22B_uncoupled', 'CrossIndustryInvoice_100pD22B.xsd')
